@@ -15,7 +15,7 @@ pipeline {
 
         stage('Tests unitaires') {
             steps {
-                sh 'venv/bin/pytest tests/'
+		sh 'PYTHONPATH=. venv/bin/pytest tests/'
             }
         }
 
